@@ -1,0 +1,433 @@
+/* General Styles */
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            padding-top: 70px;
+            flex-direction: column;
+        }
+
+/* Header Styles */
+.navbar {
+    position: fixed;     /* fix it to top */
+    top: 0;              /* stick to top */
+    left: 0;
+    width: 100%;         /* full width */
+    z-index: 1030; 
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     /* border-bottom: 1px solid rgba(255, 255, 255, 0.2) */
+    padding: 4px 2rem;
+    /* border-bottom: 3px solid #ffffff; */
+    transition: background 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+
+
+.navbar-nav .btn-custom {
+    margin-left: 1rem;
+}
+
+
+/* LinkedIn link style */
+.linkedin-link {
+    color: white !important; /* LinkedIn blue */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: white !important; /* darker LinkedIn blue on hover */
+    text-decoration: underline;
+}
+
+
+/* Custom Logout Button */
+.btn-logout {
+    background: #e85848;      /* Red background */
+    color: #fff !important;  /* White text */
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 12px;        /* small spacing from username */
+}
+
+.btn-logout:hover {
+    
+    color: #fff !important;
+    transform: scale(1.03);   /* Slight zoom */
+}
+
+
+.center-box {
+    min-height: 91vh;              /* full viewport height */
+    display: flex;                  /* enable flexbox */
+    justify-content: center;        /* center horizontally */
+    align-items: center;            /* center vertically */
+    
+}
+
+.center-box .container {
+    /* margin-top: 20px; */
+    max-width: 700px;   /* reduce width */
+    width: 90%;         /* responsive: takes 90% on small screens */
+    border-radius: 22px;
+    height: 500px;
+    
+    /* padding: 80px; */
+}
+
+.box-content {
+    max-width: 500px;
+    width: 90%;
+    padding: 20px 60px; 
+    border-radius: 20px;  
+    overflow: hidden;      /* ensures background respects radius */
+}
+
+.box-content h1 {
+    margin-top: 30px;   /* push heading down */
+    font-weight: 650;   /* extra bold */
+    font-size: 37px;
+}
+
+
+.box-content .mt-4 {
+    margin-top: 50px !important;
+    margin-bottom: 20px;
+}
+
+
+/*login box*/
+.login-box {
+    min-height: 91vh;               /* full viewport height */
+    display: flex;                   /* enable flexbox */
+    justify-content: center;         /* center horizontally */
+    align-items: center;             /* center vertically */
+    padding: 20px;   
+}
+
+.login-card {
+    /* margin-top: 40px; */
+    background: rgba(255, 255, 255, 0.95);     
+    /* height: 500px;           */
+    padding: 30px 30px;              /* inner spacing */
+    border-radius: 20px;             /* rounded corners */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* soft shadow */
+    max-width: 600px;                /* optional: control width */
+    width: 100%;                     /* responsive */
+}
+
+.login-card .btn-custom {
+    display: block;
+    width: 100%;              /* reduce width (change % as needed) */
+    margin-top: 40px;  /* top margin pushes it slightly lower */
+    border-radius: 10px;     /* keep rounded style */
+}
+
+.form-label {
+    font-weight: 600;   /* bold labels */
+    margin-bottom: 6px; /* small gap between label and input */
+}
+
+.google-btn {
+    background-color: white;
+    width: 100%;  
+    height: 40px;
+    border: 1px solid black;
+    color: black;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth effect */
+}
+
+.google-btn:hover {
+    transform: translateY(-3px); /* move slightly up */
+    
+    background-color: white;  
+    border-color: black;
+    
+    color: black;               /* keep same */
+}
+
+
+/* Register Page Box */
+.register-box {
+    min-height: 91vh;              /* full screen height */
+    display: flex;                  /* flexbox for centering */
+    justify-content: center;        /* center horizontally */
+    align-items: center;            /* center vertically */
+    padding: 20px;                  /* small spacing for mobile */
+}
+
+.register-card {
+    background: rgba(255, 255, 255, 0.95);               /* white background */
+    padding: 40px 30px;             /* inner spacing */
+    border-radius: 20px;            /* rounded corners */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* soft shadow */
+    max-width: 600px;               /* limit width */
+    width: 100%;                    /* responsive */
+}
+
+/* Register Button */
+.btn-register {
+    margin-top: 10px;                 
+    background: linear-gradient(135deg, #667eea, #764ba2);  /* custom gradient */
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 12px;              /* smooth rounded corners */
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    /* background: linear-gradient(135deg, #5a67d8, #6b46c1);   */
+    transform: translateY(-2px);
+    color: #fff !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Tasks Box */
+.tasks-box {
+    min-height: 91vh;               /* full screen */
+    display: flex;                   /* flexbox */
+    justify-content: center;         /* horizontal center */
+    align-items: center;             /* vertical center */
+    padding: 20px;                   /* space for small screens */
+}
+
+.tasks-card {
+    margin: 45px 0;
+    
+    background: rgba(255, 255, 255, 0.95);                /* white background */
+    padding: 30px;
+    border-radius: 20px;             /* rounded corners */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    max-width: 850px;               /* wider than login/register */
+    width: 100%;
+}
+
+
+/* Edit Task Box */
+.edit-task-box {
+    min-height: 91vh;              /* full height */
+    display: flex;
+    justify-content: center;        /* horizontal center */
+    align-items: center;            /* vertical center */
+    padding: 20px;
+}
+
+.edit-task-card {
+    background: #fff;               /* white card */
+    padding:  50px 30px;
+    border-radius: 20px;            /* rounded borders */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    max-width: 850px;   
+              /* medium width */
+    width: 100%;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    margin-top: auto;
+    background: linear-gradient(90deg, #232526, #414345);
+    color: #fff;
+    height: 40px;    
+    padding: 0,3rem 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    /* border-top: 3px solid #ffffff; */
+    display: flex; /* Ensure footer uses flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Fallback for text alignment */
+    width: 100%; /* Ensure container spans full width */
+}
+
+.footer .container .text-muted {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #ffffff !important;
+}
+
+/* Button Styles */
+.btn-custom {
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+} */
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #b02a37;
+    border-color: #b02a37;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: #d39e00;
+    border-color: #d39e00;
+
+}
+
+/* Table Styling */
+.table {
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    overflow: hidden;
+    border-collapse: separate !important;
+}
+
+.table th, .table td {
+     border: none;
+    vertical-align: middle;
+}
+
+/* Form Styling */
+.form-control {
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Custom Margin Class */
+.mb-4 {
+    margin-bottom: 2rem !important;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.mb-4::after {
+    display: none;
+}
+
+.mb-4:hover::after {
+    width: 100px;
+}
+
+/* Error Message Styling */
+.error-message {
+    background-color: #ffe6e6;
+    color: #d32f2f;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+   .navbar {
+        padding: 0 12px;  /* reduce vertical + horizontal padding */
+        max-height: 110px;   /* explicitly set min height */
+    }
+
+    .navbar-brand {
+        font-size: 25px;
+    }
+
+    .nav-link {
+        padding: 4px 8px;   /* tighter spacing */
+        font-size: 0.9rem;  /* slightly smaller text */
+    }
+
+    .navbar-toggler {
+        padding: 2px 6px;   /* shrink toggle button */
+        font-size: 1.2rem;
+    }
+
+    .btn-custom {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1.mb-4 {
+        font-size: 1.8rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+    }
+}

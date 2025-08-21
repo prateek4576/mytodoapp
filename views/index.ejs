@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+<div class="center-box">
+    <div class="container box-content bg-white text-center shadow">
+        <h1 class="mb-4">Welcome to ToDo App</h1>
+        <p class="lead"><strong> A full-stack ToDo web app that lets users securely register and manage their tasks. 
+            It includes both local login (with email and password) and Google sign-in for convenience.</strong></p>
+        
+            <p class="lead"><strong>For security, I implemented bcrypt password hashing, session management, and safe database queries. 
+                I also integrated Google OAuth using Passport.js, making the login process simple and secure.</strong></p>
+        <div class="mt-4">
+            <a href="/login" class="btn btn-custom btn-primary mx-2">Login</a>
+            <a href="/register" class="btn btn-custom btn-primary mx-2">Register</a>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>

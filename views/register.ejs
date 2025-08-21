@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<div class="register-box">
+    <div class="register-card">
+        <h2 class="text-center mb-4"><strong>Register</strong></h2>
+        <% if (error) { %>
+            <div class="alert alert-danger"><%= error %></div>
+        <% } %>
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-register">Register</button>
+        </form>
+        <p class="text-center mt-3">Already have an account? <a href="/login" class="text-primary">Login here</a></p>
+    </div>
+</div>
+<%- include('partials/footer') %>
