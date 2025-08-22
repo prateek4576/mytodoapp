@@ -3,7 +3,9 @@ import passport from '../passport/passport.js';
 import bcrypt from 'bcrypt';
 import pool from '../config/database.js';
 
+
 const router = express.Router();
+const saltRounds = 10;
 
 const ensureAuthenticated = (req, res, next) => {
     if (req.isAuthenticated()) return next();
@@ -53,7 +55,7 @@ router.get('/register', (req, res) => {
 router.post('/register', async (req, res) => {
     try {
         const { email, password } = req.body;
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         await pool.query('INSERT INTO users (email, password) VALUES ($1, $2)', [email, hashedPassword]);
         res.redirect('/login');
