@@ -23,5 +23,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
 
-const PORT = process.env.PORT || 3000;  // Render will provide PORT
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
