@@ -1,23 +1,154 @@
 <%- include('partials/header') %>
-<div class="edit-task-box">
-    <div class="edit-task-card">
-        <h2 class="text-center mb-4"><strong>Edit Task</strong></h2>
-        <form action="/task/edit/<%= task.id %>" method="POST">
-            <div class="mb-3">
-                <label for="Title" class="form-label">Title</label>
-                <input type="text" name="title" class="form-control" value="<%= task.title %>" required>
+
+<main class="edit-page">
+
+    <div class="container">
+
+        <div class="edit-wrapper">
+
+            <!-- Back -->
+
+            <a
+                href="/dashboard"
+                class="back-link"
+            >
+                <i class="bi bi-arrow-left"></i>
+                Back to dashboard
+            </a>
+
+
+            <!-- Edit Card -->
+
+            <div class="edit-card">
+
+                <div class="edit-card-header">
+
+                    <div class="edit-icon">
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TASK MANAGEMENT
+                        </span>
+
+                        <h1>
+                            Edit your task
+                        </h1>
+
+                        <p>
+                            Update the details and progress of your task.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    action="/task/edit/<%= task.id %>"
+                    method="POST"
+                    class="edit-form"
+                >
+
+                    <div class="form-group-modern">
+
+                        <label for="title">
+                            Task title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            value="<%= task.title %>"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group-modern">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="6"
+                            placeholder="Describe your task..."
+                        ><%= task.description || '' %></textarea>
+
+                    </div>
+
+
+                    <div class="completion-box">
+
+                        <div class="completion-info">
+
+                            <div class="completion-icon">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Task completed
+                                </strong>
+
+                                <span>
+                                    Mark this task as completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <label class="modern-switch">
+
+                            <input
+                                type="checkbox"
+                                name="completed"
+                                <%= task.completed ? 'checked' : '' %>
+                            >
+
+                            <span class="switch-slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="edit-actions">
+
+                        <a
+                            href="/dashboard"
+                            class="cancel-btn"
+                        >
+                            Cancel
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="save-task-btn"
+                        >
+                            <i class="bi bi-check2"></i>
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
             </div>
-            <div class="mb-3">
-                <label for="Description" class="form-label">Description</label>
-                <textarea name="description" class="form-control" rows="3"><%= task.description %></textarea>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" name="completed" class="form-check-input" <%= task.completed ? 'checked' : '' %>>
-                <label class="form-check-label">Completed</label>
-            </div>
-            <button type="submit" class="btn btn-custom btn-primary">Update Task</button>
-            <a href="/dashboard" class="btn btn-custom btn-secondary">Cancel</a>
-        </form>
+
+        </div>
+
     </div>
-</div>
+
+</main>
+
 <%- include('partials/footer') %>

@@ -1,26 +1,137 @@
 <%- include('partials/header') %>
 
-<div class="login-box">
-    <div class="login-card">
-        <h2 class="text-center mb-4"><strong>Login</strong></h2>
-        <% if (error) { %>
-            <div class="error-message"><%= error %></div>
-        <% } %>
-        <form action="/login" method="POST">
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+<main class="auth-page">
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <div class="auth-icon">
+                <i class="bi bi-box-arrow-in-right"></i>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+
+            <div class="auth-header">
+
+                <h1>
+                    Welcome back
+                </h1>
+
+                <p>
+                    Sign in to continue managing your tasks.
+                </p>
+
             </div>
-            <button type="submit" class="btn btn-custom btn-primary">Login</button>
-            <p class="text-center mt-2 mb-2">or</p>
-           <a href="/auth/google" class="btn login-btn google-btn">Login with Google</a>
-        </form>
-        <p class="text-center mt-3">Not registered? <a href="/register" class="text-primary">Register here</a></p>
+
+            <% if (error) { %>
+
+                <div class="modern-error">
+
+                    <i class="bi bi-exclamation-circle-fill"></i>
+
+                    <span>
+                        <%= error %>
+                    </span>
+
+                </div>
+
+            <% } %>
+
+            <form
+                action="/login"
+                method="POST"
+                class="modern-form"
+            >
+
+                <div class="form-group-modern">
+
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-group-modern">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+                    Sign In
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+
+            <a
+                href="/auth/google"
+                class="google-login-btn"
+            >
+                <i class="bi bi-google"></i>
+
+                Continue with Google
+            </a>
+
+            <p class="auth-switch">
+                Don't have an account?
+
+                <a href="/register">
+                    Create one
+                </a>
+            </p>
+
+        </div>
+
+        <div class="auth-security-note">
+
+            <i class="bi bi-shield-check"></i>
+
+            Your account is protected with secure authentication
+            and encrypted password hashing.
+
+        </div>
+
     </div>
-</div>
+
+</main>
 
 <%- include('partials/footer') %>

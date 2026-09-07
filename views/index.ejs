@@ -1,16 +1,234 @@
 <%- include('partials/header') %>
-<div class="center-box">
-    <div class="container box-content bg-white text-center shadow">
-        <h1 class="mb-4">Welcome to ToDo App</h1>
-        <p class="lead"><strong> A full-stack ToDo web app that lets users securely register and manage their tasks. 
-            It includes both local login (with email and password) and Google sign-in for convenience.</strong></p>
-        
-            <p class="lead"><strong>For security, I implemented bcrypt password hashing, session management, and safe database queries. 
-                I also integrated Google OAuth using Passport.js, making the login process simple and secure.</strong></p>
-        <div class="mt-4">
-            <a href="/login" class="btn btn-custom btn-primary mx-2">Login</a>
-            <a href="/register" class="btn btn-custom btn-primary mx-2">Register</a>
+
+<main class="landing-page">
+
+    <div class="container">
+
+        <div class="hero-section">
+
+            <!-- Left Content -->
+            <div class="hero-content">
+
+                <h1 class="hero-title">
+                    Get things done.
+                    <span>Stay in control.</span>
+                </h1>
+
+                <p class="hero-description">
+                    TaskFlow is a modern task management platform that helps
+                    you organize your day, track your progress, and focus on
+                    what actually matters.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="/register"
+                        class="primary-action"
+                    >
+                        Get Started
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a
+                        href="/login"
+                        class="secondary-action"
+                    >
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        Sign In
+                    </a>
+
+                </div>
+
+                <div class="hero-features">
+
+                    <div class="hero-feature">
+                        <i class="bi bi-shield-check"></i>
+                        Secure authentication
+                    </div>
+
+                    <div class="hero-feature">
+                        <i class="bi bi-cloud-check"></i>
+                        Cloud database
+                    </div>
+
+                    <div class="hero-feature">
+                        <i class="bi bi-google"></i>
+                        Google sign-in
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Visual -->
+            <div class="hero-visual">
+
+                <div class="dashboard-preview">
+
+                    <div class="preview-topbar">
+
+                        <div class="preview-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="preview-title">
+                            My Tasks
+                        </div>
+
+                        <div class="preview-icon">
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="preview-content">
+
+                        <div class="preview-welcome">
+                            <div>
+                                <div class="preview-small">
+                                    Welcome back
+                                </div>
+
+                                <h3>
+                                    Today's Tasks
+                                </h3>
+                            </div>
+
+                            <div class="preview-date">
+                                <i class="bi bi-calendar3"></i>
+                            </div>
+                        </div>
+
+                        <div class="mini-progress">
+
+                            <div class="progress-info">
+                                <span>Daily progress</span>
+                                <strong>75%</strong>
+                            </div>
+
+                            <div class="progress-bar-custom">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="preview-task completed-task">
+                            <div class="task-check checked">
+                                <i class="bi bi-check"></i>
+                            </div>
+
+                            <div class="preview-task-text">
+                                <strong>Finish assignment</strong>
+                                <span>Completed</span>
+                            </div>
+
+                            <i class="bi bi-check-circle-fill task-status-icon"></i>
+                        </div>
+
+                        <div class="preview-task">
+                            <div class="task-check"></div>
+
+                            <div class="preview-task-text">
+                                <strong>Review project</strong>
+                                <span>In progress</span>
+                            </div>
+
+                            <i class="bi bi-clock task-status-icon pending"></i>
+                        </div>
+
+                        <div class="preview-task">
+                            <div class="task-check"></div>
+
+                            <div class="preview-task-text">
+                                <strong>Read documentation</strong>
+                                <span>Pending</span>
+                            </div>
+
+                            <i class="bi bi-circle task-status-icon pending"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
+        <!-- Features -->
+
+        <section class="features-section">
+
+            <div class="section-heading">
+                <span>POWERFUL & SIMPLE</span>
+
+                <h2>
+                    Everything you need to stay productive
+                </h2>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon purple">
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+
+                    <h3>
+                        Smart Task Management
+                    </h3>
+
+                    <p>
+                        Create, edit, complete and organize tasks
+                        with an intuitive workflow.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon blue">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+
+                    <h3>
+                        Secure Authentication
+                    </h3>
+
+                    <p>
+                        Passwords are securely hashed with bcrypt
+                        and sessions are protected with Passport.js.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon pink">
+                        <i class="bi bi-google"></i>
+                    </div>
+
+                    <h3>
+                        Google Sign-In
+                    </h3>
+
+                    <p>
+                        Log in quickly using your Google account
+                        with secure OAuth authentication.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
-</div>
+
+</main>
+
 <%- include('partials/footer') %>
