@@ -18,7 +18,7 @@ import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth2';
 import bcrypt from 'bcrypt';
 
-import User from '../models/User.js';
+import User from '../models/user.js';
 
 // Local Login
 passport.use(
